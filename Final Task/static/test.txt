@@ -1,0 +1,6 @@
+here we check whether static filles are  being calles or not.
+
+to run this add in url as /static/test.txt  then only shows this file else dosent show
+
+
+anyone can easily access this static files , add only files which are for public

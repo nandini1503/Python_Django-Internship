@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Result{% endblock title %}
+
+{% block head%}
+{% endblock %}
+
+{% block body %}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Data</th>
+      <th scope="col">Values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">First Name</th>
+      <td>{{fname}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Last Name</th>
+      <td>{{lname}}</td>
+    </tr>
+     <tr>
+      <th scope="row">Company Name</th>
+      <td>{{c_name}}</td>
+    </tr>
+     <tr>
+      <th scope="row">Address</th>
+      <td>{{add}}</td>
+    </tr>
+     <tr>
+      <th scope="row">Email</th>
+      <td>{{email}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Phone</th>
+      <td>{{phone}}</td>
+      
+    </tr>
+     <tr>
+      <th scope="row">Aditional Information</th>
+      <td>{{a_info}}</td>
+      
+    </tr>
+  </tbody>
+</table>
+{% endblock %}

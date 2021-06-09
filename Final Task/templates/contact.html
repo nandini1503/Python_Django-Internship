@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+{% block head %}
+
+<style>
+body{
+background-image: linear-gradient(to bottom right,pink,lightgreen);
+}
+.input {
+	margin: 0;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	opacity: 0.6;
+	filter: alpha(opacity=60); /* For IE8 and earlier */
+	background-color:transperent;
+    border:1px solid black;
+    
+}
+#input {
+  opacity: 0.6;
+	filter: alpha(opacity=60); /* For IE8 and earlier */
+  border:none;
+  outline:none;
+  }
+</style>
+ {% endblock %}
+{% block body %}
+<div class="container my-4"  >
+<form method="POST" action="/result">
+{% csrf_token %}
+  <!-- 2 column grid layout with text inputs for the first and last names -->
+  <div class="row mb-4">
+    <div class="col">
+      <div class="form-outline">
+        <input type="text"  id="input" name="f_name" class="form-control input" />
+        <label class="form-label" for="form6Example1">First name</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-outline">
+        <input type="text" name="l_name" id="input" class="form-control input" />
+        <label class="form-label" for="form6Example2">Last name</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Text input -->
+  <div class="form-outline mb-4">
+    <input type="text"  id="input" name="c_name" class="form-control input" />
+    <label class="form-label" for="form6Example3">Company name</label>
+  </div>
+
+  <!-- Text input -->
+  <div class="form-outline mb-4">
+    <input type="text"  id="input" name="add" class="form-control input" />
+    <label class="form-label" for="form6Example4">Address</label>
+  </div>
+
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="email" id="input" name="email" class="form-control input" />
+    <label class="form-label" for="form6Example5">Email</label>
+  </div>
+
+  <!-- Number input -->
+  <div class="form-outline mb-4">
+    <input type="number" id="input" name="phone" class="form-control input" />
+    <label class="form-label" for="form6Example6">Phone</label>
+  </div>
+
+  <!-- Message input -->
+  <div class="form-outline mb-4">
+    <textarea id="input" name="a_info" class="form-control input" rows="4"></textarea>
+    <label class="form-label" for="form6Example7">Additional information</label>
+  </div>
+
+
+  
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-success btn-block mb-4">Contact</button>
+</form>
+</div>
+{% endblock body %}
+
+
